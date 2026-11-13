@@ -1,0 +1,14 @@
+-- =============================================================================
+-- ThermoCity — apaga TODAS as tabelas TMC_ (e os dados). Não tem volta.
+-- Ordem inversa das chaves estrangeiras. IF EXISTS: pode rodar mesmo se faltar alguma.
+-- =============================================================================
+
+DROP TABLE IF EXISTS TMC_NIVEL_CALOR CASCADE;
+DROP TABLE IF EXISTS TMC_RESUMO_DIARIO_CLIMA CASCADE;
+DROP TABLE IF EXISTS TMC_LEITURA_CLIMA CASCADE;
+DROP TABLE IF EXISTS TMC_LIMIAR_NIVEL_CALOR CASCADE;
+DROP TABLE IF EXISTS TMC_PESSOA_SINTETICA CASCADE;
+DROP SEQUENCE IF EXISTS TMC_SEQ_PESSOA_SINTETICA;
+DROP TABLE IF EXISTS TMC_CALOR_SETOR CASCADE;
+DROP TABLE IF EXISTS TMC_SERVICO CASCADE;
+DROP TABLE IF EXISTS TMC_SETOR CASCADE;

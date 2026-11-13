@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+resultados_niveis_calor/
+.idea/
+.vscode/
