@@ -19,6 +19,12 @@ PostgreSQL em poucos minutos.
 | QUANDO | `TMC_LEITURA_CLIMA` | 188.498 | Leituras horárias da estação INMET A707 (2003–2026) + índice de calor | `dados/clima/INMET_A707_…csv` |
 | QUANDO | `TMC_RESUMO_DIARIO_CLIMA` | 8.010 | Resumo de cada dia (IC máximo, temperaturas, chuva…) | calculada da série |
 | QUANDO | `TMC_NIVEL_CALOR` | 7.498 | Nível NC1–NC5 de cada dia válido | calculada da série |
+| GÊMEO | `TMC_SIMULACAO` | — | Cenários de simulação enviados pelo gestor (onda de calor, refúgios, agentes, fator k) | gravada pela `base-territorial-api` |
+| GÊMEO | `TMC_SIMULACAO_DIA` | — | Nível NC e totais da busca ativa de cada dia simulado | gravada pela `base-territorial-api` |
+| GÊMEO | `TMC_SIMULACAO_RESULTADO` | — | Resultado da simulação por dia e por setor | gravada pela `base-territorial-api` |
+
+> As tabelas do gêmeo ficam separadas das reais: rodar uma simulação não altera nenhum dado real.
+> Num banco que já existe (ex.: o do Azure), crie só as três com `sql/04_criar_tabelas_simulacao.sql` (pode rodar mais de uma vez).
 
 
 ## Como montar o banco

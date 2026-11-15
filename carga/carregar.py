@@ -75,7 +75,7 @@ def main() -> None:
             n = executar_arquivo(cur, SQL_CRIAR)
             con.commit()  # no Oracle o DDL já se confirma sozinho; aqui é transacional
             print(f"  sql/01_criar_tabelas.sql: {n} comandos executados")
-        elif existentes != TODAS:
+        elif TODAS - existentes:  # tabelas a mais (orientação, simulação) não atrapalham a carga
             sys.exit(f"Faltam tabelas TMC_: {sorted(TODAS - existentes)}. "
                      "Rode com --recriar ou crie as que faltam pelo sql/01_criar_tabelas.sql.")
 
