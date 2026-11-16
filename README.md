@@ -24,7 +24,7 @@ PostgreSQL em poucos minutos.
 | GÊMEO | `TMC_SIMULACAO_RESULTADO` | — | Resultado da simulação por dia e por setor | gravada pela `base-territorial-api` |
 
 > As tabelas do gêmeo ficam separadas das reais: rodar uma simulação não altera nenhum dado real.
-> Num banco que já existe (ex.: o do Azure), crie só as três com `sql/04_criar_tabelas_simulacao.sql` (pode rodar mais de uma vez).
+> Num banco que já existe (ex.: o do Azure), crie só as três rodando o bloco "GÊMEO DIGITAL" do fim de `sql/01_criar_tabelas.sql`.
 
 
 ## Como montar o banco
